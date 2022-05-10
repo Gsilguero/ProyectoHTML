@@ -13,15 +13,19 @@ head {
 background-color: red!important;}
 
 body {
+    display: grid;
+    grid-area: body ;
     background-color: #82CAFF;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr;
+    min-height: 100vh;
     grid-template-areas:  
     "head head head head head"
-    "article article article" /* " photo photo " */
-    /* main main photo photo */
-    /* " formularios formularios photo photo" */
-    /* footer footer footer foooter footer */;
+    "article article article div div"
+    "main main main div div "
+    "form form form div div"
+    "footer footer footer foooter footer" ;
+    
 }
 
 #titulo { 
@@ -115,4 +119,9 @@ form {
 
 .contenedor-areas {
     display: grid;
+}
+
+footer {
+    bottom: 0;
+    margin:  100px;
 }
